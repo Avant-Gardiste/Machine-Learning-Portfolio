@@ -1,3 +1,4 @@
+# Credit : https://data-flair.training/blogs/python-project-traffic-signs-recognition/
 # Load dependencies
 import tkinter as tk
 from tkinter import filedialog
@@ -79,7 +80,7 @@ def classify(file_path):
     heading.pack()
 
 def classify_button(file_path):
-	# Predict button
+    # Predict button
     classify_b=Button(top,text="Predict",command=lambda: classify(file_path),padx=10,pady=5)
     classify_b.configure(background='#364156', foreground='white',font=('arial',10,'bold'))
     classify_b.place(relx=0.415,rely=0.88)
