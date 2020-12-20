@@ -2,7 +2,9 @@
 
 Using Minimax & Alpha-beta pruning *(AI Algorithm)*, we will implement an A.I to play Tic-Tac-Toe (or Noughts and Crosses) game optimally.
 
-![title](img/ttt.png)
+<p align="center">
+	<img src="img/ttt.PNG"></img>
+</p>
 
 ## Introduction
 To solve games using A.I, we will introduce the concept of a game tree followed by *Minimax with Alpha-beta pruning* algorithm. The different states of the game are represented by nodes in the game tree, very similar to the above planning problems. The idea is just slightly different. In the game tree, the nodes are arranged in levels that correspond to each player's turns in the game so that the “root” node of the tree (usually depicted at the top of the diagram) is the beginning position in the game. In Tic-Tac-Toe, this would be the empty grid with no X's or O's played yet. Under root, on the second level, there are the possible states that can result from the first player’s moves, be it 'X' or 'O'. We call these nodes the “children” of the root node.
@@ -10,19 +12,25 @@ To solve games using A.I, we will introduce the concept of a game tree followed 
 Each node on the second level, would further have as its children nodes the states that can be reached from it by the opposing player's moves. This is continued, level by level, until reaching states where the game is over. In Tic-Tac-Toe, this means that either one of the players gets a line of three and wins, or the board is full and the game ends in a tie.
 
 ## What is Minimax & Alpha/Beta Pruning ?
-Minimax is an artificial intelligence applied in games with two players, such as Tic-Tac-Toe, Checkers, Chess and so on. This games are known as zero-sum games, because in a mathematical representation: one player wins (+1) and other player loses (-1) or both of anyone not to win (0). Alpha-beta pruning is a procedure to reduce the amount of computation and searching during minimax.
+Minimax is an artificial intelligence applied in games with two players, such as Tic-Tac-Toe, Checkers, Chess and so on. This games are known as zero-sum games, because in a mathematical representation: one player wins (+1) and other player loses (-1) or both of anyone not to win (0). Alpha-beta pruning is a search algorithm that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree. This allows us to search much faster and even go into deeper levels in the game tree. It cuts off branches in the game tree which need not be searched because there already exists a better move available. The algorithm maintains two values, alpha and beta, which represent the maximum score that the maximizing player is assured of and the minimum score that the minimizing player is assured of respectively. Initially alpha is negative infinity and beta is positive infinity, i.e. both players start with their lowest possible score. It can happen that when choosing a certain branch of a certain node the minimum score that the minimizing player is assured of becomes less than the maximum score that the maximizing player is assured of (beta <= alpha). If this is the case, the parent node should not choose this node, because it will make the score for the parent node worse. Therefore, the other branches of the node do not have to be explored.
 
 ## How does it work ?
 The algorithm search, recursively, the best move that leads the Max player to win or not lose (draw). It consider the current state of the game and the available moves at that state, then for each valid move it plays (alternating min and max) until it finds a terminal state (win, draw or lose).
 
 ## Game Tree 
 Below, the best move is on the middle because the max value is on the second node on the left.
-![title](img/game_tree.png)
+
+<p align="center">
+	<img src="img/game_tree.png"></img>
+</p>
 
 We can see that the depth is equal to the valid moves on the board. 
 
 Simplified game tree:
-![title](img/simplified_GT.png)
+
+<p align="center">
+	<img src="img/simplified-GT.png"></img>
+</p>
 
 The tree above has 11 nodes while the whole game tree has 549.946 nodes.
 
