@@ -1,4 +1,4 @@
-# Flask Web-App Covid-19 Detection 
+# Flask Web-App Covid-19 Prediction
 [![](https://img.shields.io/badge/python-3.5%2B-blue.svg)]() 
 [![](https://img.shields.io/badge/Flask-1.1.2-brightgreen.svg)]()
 [![](https://img.shields.io/badge/Keras-2.4.3-red.svg)]()
