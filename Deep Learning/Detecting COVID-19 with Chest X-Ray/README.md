@@ -13,7 +13,7 @@ Some additional work with HTML, CSS and Javascript and the model front-end looks
 ## Set up app the Web-App locally
   - Clone The Repository or Download Zip & Extract it.
   - Install Requirements ```pip install -r requirements.txt```
-  - To run the app on localhost run ```python main.py```
+  - To run the app on localhost run ```python app.py```
   - App is running at ```http://127.0.0.1:5000/```
 
 **Dataset**
